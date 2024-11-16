@@ -1,0 +1,32 @@
+CREATE DATABASE test_db;
+SHOW DATABASES;
+USE test_db;
+CREATE TABLE users (
+    id INT,
+    name TEXT,
+    age INT
+);
+SELECT * FROM users;
+INSERT INTO users (id, name, age) VALUES (1, 'John Doe', 30);
+SELECT * FROM users;
+INSERT INTO users (id, name, age) VALUES (2, 'Jane Smith', 25);
+SELECT * FROM users;
+
+
+ALTER TABLE users ADD email TEXT;
+SELECT * FROM users;
+ALTER TABLE users DROP email;
+SHOW TABLES;
+DROP TABLE users;
+SHOW TABLES;
+SHOW DATABASES;
+DROP DATABASE test_db;
+SHOW GRANTS FOR root;
+CREATE USER admin admin123;
+SHOW GRANTS FOR admin; 
+GRANT SHOW  ON *.* TO admin; 
+SHOW GRANTS FOR admin;  
+SET PASSWORD admin test123;
+
+
+
